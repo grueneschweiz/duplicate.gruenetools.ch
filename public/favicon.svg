@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 135.46666 135.46667">
+   <defs>
+      <filter id="b" width="1.37472" height="1.37472" x="-.15506" y="-.15506" style="color-interpolation-filters:sRGB">
+         <feFlood flood-color="#000" flood-opacity=".49804" result="flood" />
+         <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="6" />
+         <feOffset dx="6" dy="6" in="blur" result="offset" />
+         <feComposite in="flood" in2="offset" operator="in" result="comp1" />
+         <feComposite in="SourceGraphic" in2="comp1" result="comp2" />
+      </filter>
+      <filter id="a" width="1.37472" height="1.37472" x="-.15506" y="-.15506" style="color-interpolation-filters:sRGB">
+         <feFlood flood-color="#000" flood-opacity=".49804" result="flood" />
+         <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="6" />
+         <feOffset dx="6" dy="6" in="blur" result="offset" />
+         <feComposite in="flood" in2="offset" operator="in" result="comp1" />
+         <feComposite in="SourceGraphic" in2="comp1" result="comp2" />
+      </filter>
+   </defs>
+   <path d="M28.31042 13.75833h92.86875v92.86875H28.31042z"
+      style="fill:#e10078;fill-opacity:1;stroke:none;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;filter:url(#a)"
+      transform="translate(.92604 -.39688)" />
+   <path d="M12.43542 29.63333h92.86875v92.86875H12.43542z"
+      style="fill:#84b414;fill-opacity:1;stroke:none;stroke-width:6;stroke-dasharray:none;stroke-opacity:1;filter:url(#b)"
+      transform="translate(.92604 -.39688)" />
+</svg>

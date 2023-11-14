@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>duplicate.gruene.ch</title>
+    <link
+      rel="preload"
+      href="/OpenSans-VariableFont_wdth,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin=""
+    />
+    <style>
+      @font-face {
+        font-family: 'Open Sans';
+        src: url('OpenSans-VariableFont_wdth,wght.ttf') format(truetype)
+          tech(variations);
+        font-weight: 100 1000;
+        font-display: swap;
+      }
+      :root {
+        --color-primary: #84b414;
+        --color-primary-light: #cee1a1;
+        --color-primary-dark: #516f0a;
+        --color-primary-active: var(--color-primary-light);
+
+        --color-secondary: #e10078;
+        --color-secondary-light: #f0cee1;
+        --color-secondary-dark: #b1025f;
+        --color-secondary-active: var(--color-secondary-light);
+
+        --color-text-dark: #333333;
+        --color-text-light: #dddddd;
+        --color-text: var(--color-text-light);
+
+        --color-text-muted: #999999;
+
+        --color-bg-light: #ffffff;
+        --color-bg-dark: #333333;
+        --color-bg: var(--color-bg-dark);
+
+        --color-error: #ef0606;
+
+        --font-title: 'Arial Black', 'Open Sans', Gadget, sans-serif;
+        --font-text: 'Open Sans', sans-serif;
+
+        font-family: var(--font-text);
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --color-text: var(--color-text-dark);
+          --color-bg: var(--color-bg-light);
+          --color-primary-active: var(--color-primary-dark);
+          --color-secondary-active: var(--color-secondary-dark);
+        }
+      }
+      #root {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+      }
+      .init-loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: var(--font-text);
+      }
+      @keyframes spinner-border {
+        to {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      .spinner-border {
+        color: var(--color-primary);
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        vertical-align: text-bottom;
+        border: 0.25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spinner-border 0.75s linear infinite;
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="init-loader">
+        <div class="spinner-border" role="status"></div>
+        <span>Loading&hellip;</span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
