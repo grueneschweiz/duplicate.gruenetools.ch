@@ -55,5 +55,5 @@ rm -rf dist
 yarn run build
 
 # 2. Copy the build folder to the server
-rsync -avz --delete dist/ root@server:/var/www/html
+rsync -avz --exclude '.htaccess' --delete dist/ root@server:/var/www/html
 ```
