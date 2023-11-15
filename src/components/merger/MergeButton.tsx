@@ -71,12 +71,11 @@ export function MergeButton({
 
   return (
     <>
-      {error && <ErrorMsg error={error} style={{ marginTop: '1em' }} />}
+      {error && <ErrorMsg error={error} />}
       <Button
         style={{
           width: '100%',
           fontWeight: 'bold',
-          marginTop: '1em',
         }}
         onClick={onClick}
         loading={loading}

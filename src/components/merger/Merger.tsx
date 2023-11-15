@@ -53,8 +53,15 @@ export function Merger() {
   }
 
   return (
-    <div style={{ width: '100%' }}>
-      <p style={{ marginBottom: '3em' }}>{t('merger/description')}</p>
+    <div
+      style={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1em',
+      }}
+    >
+      <p style={{ marginBottom: '2em' }}>{t('merger/description')}</p>
       <div
         style={{
           display: 'grid',
@@ -64,7 +71,7 @@ export function Merger() {
           alignItems: 'start',
           width: '100%',
           background: hasResult
-            ? 'linear-gradient(to right, transparent 66%, rgba(144, 238, 144, 0.2) 66%)'
+            ? 'linear-gradient(to right, transparent calc((100% - 2em) / 3 * 2 + 2em), rgba(132, 180, 20, 0.1) calc((100% - 2em) / 3 * 2 + 2em))'
             : 'none',
         }}
       >
@@ -113,7 +120,12 @@ export function Merger() {
       {hasResult && (
         <>
           <Message
-            style={{ background: 'rgba(0, 255, 0, 0.1)', width: '100%' }}
+            style={{
+              background: 'rgba(132, 180, 20, 0.1)',
+              color: 'var(--color-primary)',
+              fontWeight: 700,
+              width: '100%',
+            }}
           >
             {t('merger/success')}
           </Message>
